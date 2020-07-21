@@ -261,7 +261,7 @@ if (navigator.appVersion.indexOf("Mac") != -1) {
 	if ($('.scroll-body').length > 0) { scroll(); }
 }
 
-/*/*
+/*
 function scrollwhouse(){
 		var scs=100;
 		var mss=50;
