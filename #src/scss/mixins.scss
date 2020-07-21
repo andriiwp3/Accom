@@ -8,7 +8,7 @@
 	}
 }
 @mixin anim($time, $delay) {
-	-webkit-transition: all $time ease $delay;
+	-webkit-transition: all $time ease-in $delay;
 	-moz-transition: all $time ease $delay;
 	-ms-transition: all $time ease $delay;
 	-o-transition: all $time ease $delay;

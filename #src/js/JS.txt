@@ -16,7 +16,7 @@
 @@include('sliders.js')
 @@include('scroll.js')
 @@include('fullscroll.js')
-@@include('responsive.js')
+@@include('dynamic_adapt.js')
 @@include('custom.js')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>

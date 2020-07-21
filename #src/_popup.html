@@ -1,35 +1,78 @@
-<!--
-<div class="popup">
+<div class="popup popup-subapplication">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-content">
-				<div class="popup-close"></div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
-					</div>
-					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
-					</div>
-				</form>
+				<div class="popup-close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M9.11567 11.0004L2.18234 4.06702C1.93823 3.82292 1.93823 3.42715 2.18234 3.18308C2.42644 2.93901 2.82221 2.93897 3.06628 3.18308L9.99965 10.1164L16.933 3.18308C17.1771 2.93897 17.5728 2.93897 17.8169 3.18308C18.061 3.42718 18.061 3.82295 17.8169 4.06702L10.8836 11.0004L17.8169 17.9337C18.061 18.1778 18.061 18.5736 17.8169 18.8177C17.6949 18.9397 17.5349 19.0007 17.3749 19.0007C17.215 19.0007 17.055 18.9397 16.9329 18.8177L9.99965 11.8843L3.06631 18.8177C2.94428 18.9397 2.7843 19.0007 2.62432 19.0007C2.46435 19.0007 2.30441 18.9397 2.18234 18.8177C1.93823 18.5736 1.93823 18.1778 2.18234 17.9337L9.11567 11.0004Z" />
+					</svg>
+				</div>
+				<div class="popup-subapplication__left ">
+					<div class="popup__title"><span>Оставьте заявку</span>, на бесплатную консультацию</div>
+					<div class="popup__desc">Заполните форму ниже и с вами свяжется наш менеджер</div>
+					<form data-ms="thanks" action="#" class="popup__form form-popup">
+						<div class="popup-form__how how-popup">
+							<div class="how-popup__title">Как с вами связаться?</div>
+							<div class="how-popup__buttons">
+								<label class="how-popup__button">
+									<input type="radio" name="form[]" class="check" checked>
+									<span class="how-popup__checkmark">Телефон</span>
+								</label>
+								<label class="how-popup__button">
+									<input type="radio" name="form[]" class="check">
+									<span class="how-popup__checkmark">Viber</span>
+								</label>
+								<label class="how-popup__button">
+									<input type="radio" name="form[]" class="check">
+									<span class="how-popup__checkmark">WhatsApp</span>
+								</label>
+								<label class="how-popup__button">
+									<input type="radio" name="form[]" class="check">
+									<span class="how-popup__checkmark">Telegram</span>
+								</label>
+							</div>
+						</div>
+						<div class="popup-form__contact-input input-contact-popup">
+							<label for="input-contact-popup__input" class="input-contact-popup__label">Введите ваш
+								номер:</label>
+							<input data-error="Пожалуйста, введите корректный номер телефона" data-value="+(098) 319-48-60"
+								type="tel" name="input-contact-popup__input" class="input-contact-popup__input phone req vn">
+						</div>
+						<div class="popup-form__additional">
+							<button type="submit" class="popup-form__btn btn"><span>Получить расчёт</span></button>
+							<div class="popup-form__or">или звоните +375 (29) 360-45-77</div>
+						</div>
+					</form>
+				</div>
+				<div class="popup-subapplication__right">
+					<img src="./img/manager.png" alt="Our Manager" />
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="popup popup-video">
+
+
+
+<div class="popup popup-thanks">
 	<div class="popup-table table">
 		<div class="cell">
-			<div class="popup-close"></div>
-			<div class="popup-video__value video"></div>
+			<div class="popup-content thanks-popup-content">
+				<div class="popup-close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M9.11567 11.0004L2.18234 4.06702C1.93823 3.82292 1.93823 3.42715 2.18234 3.18308C2.42644 2.93901 2.82221 2.93897 3.06628 3.18308L9.99965 10.1164L16.933 3.18308C17.1771 2.93897 17.5728 2.93897 17.8169 3.18308C18.061 3.42718 18.061 3.82295 17.8169 4.06702L10.8836 11.0004L17.8169 17.9337C18.061 18.1778 18.061 18.5736 17.8169 18.8177C17.6949 18.9397 17.5349 19.0007 17.3749 19.0007C17.215 19.0007 17.055 18.9397 16.9329 18.8177L9.99965 11.8843L3.06631 18.8177C2.94428 18.9397 2.7843 19.0007 2.62432 19.0007C2.46435 19.0007 2.30441 18.9397 2.18234 18.8177C1.93823 18.5736 1.93823 18.1778 2.18234 17.9337L9.11567 11.0004Z" />
+					</svg>
+				</div>
+				<div class="popup-thanks__left ">
+					<div class="popup__title"><span>Спасибо :) </span>Ваша заявка отправлена</div>
+					<div class="popup__desc">В ближайшее время с вами свяжется наш менеджер</div>
+				</div>
+				<div class="popup-thanks__right">
+					<img src="./img/icons/smile.svg" alt="Smile" />
+				</div>
+			</div>
 		</div>
 	</div>
-</div> 
--->
+</div>

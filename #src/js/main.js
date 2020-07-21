@@ -1,5 +1,7 @@
 @@include('jq-start.js')
+@@include('jquery.inputmask.bundle.min.js')
 @@include('forms.js')
 @@include('script.js')
-@@include('jq-end.js')
 @@include('custom.js')
+@@include('dynamic_adapt.js')
+@@include('jq-end.js')

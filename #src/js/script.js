@@ -6,7 +6,7 @@ function testWebP(callback) {
 	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
 
-testWebP(function(support) {
+testWebP(function (support) {
 
 	if (support == true) {
 		document.querySelector('body').classList.add('webp');
@@ -33,16 +33,28 @@ if (isMobile.iOS()) {
 	var act = "touchstart";
 }
 
-let iconMenu = document.querySelector(".icon-menu");
+let iconsMenu = document.querySelectorAll(".icon-menu");
 let body = document.querySelector("body");
 let menuBody = document.querySelector(".menu__body");
-if (iconMenu) {
-	iconMenu.addEventListener("click", function () {
-		iconMenu.classList.toggle("active");
-		body.classList.toggle("lock");
-		menuBody.classList.toggle("active");
+let menuMask = document.querySelector(".menu__mask");
+if (iconsMenu) {
+	iconsMenu.forEach(function (icon) {
+		icon.addEventListener("click", function () {
+			iconsMenu.forEach(function (icon) { icon.classList.toggle('active') });
+			body.classList.toggle("lock");
+			menuBody.classList.toggle("active");
+			menuMask.classList.toggle("active");
+		});
 	});
 }
+document.addEventListener('click', function (e) {
+	if (iconsMenu[1].classList.contains('active') && e.target.classList.contains('menu__mask')) {
+		iconsMenu.forEach(function (icon) { icon.classList.toggle('active') })
+		body.classList.toggle("lock");
+		menuBody.classList.toggle("active");
+		menuMask.classList.toggle("active");
+	}
+});
 
 //ZOOM
 if ($('.gallery').length > 0) {
@@ -249,7 +261,7 @@ if (navigator.appVersion.indexOf("Mac") != -1) {
 	if ($('.scroll-body').length > 0) { scroll(); }
 }
 
-/*
+/*/*
 function scrollwhouse(){
 		var scs=100;
 		var mss=50;
