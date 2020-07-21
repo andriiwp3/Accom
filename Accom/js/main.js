@@ -329,9 +329,9 @@ function forms() {
 			$(this).removeClass('err');
 		});
 	});
-/*  	$('input.phone').focusout(function (event) {
-		maskclear($(this));
-	});  */
+/* 	  	$('input.phone').focusout(function (event) {
+			$(this).removeClass('valerr');
+		});   */
 	/*
 	$.each($('input.num'), function (index, val) {
 		$(this).focus(function () {
@@ -549,7 +549,7 @@ $('form button[type=submit]').click(function () {
 
 		if (ms != null && ms != '') {
 			showMessageByClass(ms);
-			
+
 			return false;
 		}
 	} else {
@@ -571,7 +571,7 @@ function formValidate(input) {
 			removeError(input);
 		}
 	} else {
-		if (input.val() == '' || input.val() == input.attr('data-value')) {
+		if (input.val() == '' || input.val() == input.attr('data-value') || input.hasClass('err')) {
 			er++;
 			addError(input);
 		} else {
