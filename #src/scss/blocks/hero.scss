@@ -1,7 +1,8 @@
 .hero {
 	width: 100%;
-	min-height: 100vh;
+	min-height: 60vh;
 	position: relative;
+	margin: 0px 0px 20px 0px;
 	&:after {
 		content: "";
 		position: absolute;
@@ -72,7 +73,7 @@
 	}
 }
 .title-hero {
-	@media (max-width:$md4+px){
+	@media (max-width: $md4+px) {
 		svg {
 			width: 14px;
 		}
@@ -115,7 +116,7 @@
 		justify-content: stretch;
 		width: 350px;
 	}
-	@media (max-width:$md5+px){
+	@media (max-width: $md5+px) {
 		width: 100%;
 	}
 
