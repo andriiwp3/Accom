@@ -1,0 +1,208 @@
+.what-do-we-take {
+	position: relative;
+	padding: 150px 0px 100px 0px;
+	// .what-do-we-take__row
+
+	&__row {
+		display: flex;
+		align-items: stretch;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+	}
+
+	// .what-do-we-take__left
+
+	&__left {
+		flex: 0 1 65%;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+
+	// .what-do-we-take__title
+
+	&__title {
+		margin: 0px 0px 70px 0px;
+	}
+
+	// .what-do-we-take__cards
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	// .what-do-we-take__right
+
+	&__right {
+		flex: 0 0 35%;
+	}
+
+	// .what-do-we-take__spollers
+
+	&__spollers {
+	}
+
+	// .what-do-we-take__images
+
+	&__images {
+		position: absolute;
+		top: 20%;
+		right: 0;
+		width: 34%;
+		height: 100%;
+		z-index: -1;
+		img {
+		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			margin: -130px 0px 0px 0px;
+		}
+		@media (max-width: $md5+px) {
+			margin: -55px 0px 0px 0px;
+		}
+	}
+}
+.cards-what-do-we-take {
+	// .cards-what-do-we-take__card
+
+	&__card {
+		width: 213px;
+		margin: 0px 11px 13px 0px;
+		&:last-child {
+			margin: 0px 0px 13px 0px;
+		}
+		@media (max-width: $md4+px) {
+			&:nth-child(even) {
+				margin: 0px 0px 13px 0px;
+			}
+		}
+		@media (max-width: $md5+px) {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin: 0px 0px 13px 0px;
+		}
+	}
+}
+.card-what-do-we-take {
+	// .card-what-do-we-take__img
+
+	&__img {
+		margin: 0px 0px 15px 0px;
+		@media (max-width: $md5+px) {
+			margin: 0px 15px 0px 0px;
+		}
+	}
+
+	// .card-what-do-we-take__title
+
+	&__title {
+	}
+}
+.spollers-what-do-we-take {
+	// .spollers-what-do-we-take__item
+
+	&__item {
+		padding: 0px 0px 12px 19px;
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 3px;
+			width: 1px;
+		}
+		&:before {
+			height: 100%;
+			background-color: #4d4859;
+			@include anim(0.3s, 0s);
+		}
+		&:after {
+			height: 0;
+			background-color: $yellow;
+			@include anim(0.3s, 0.135s);
+		}
+		&.active {
+			&:after {
+				height: 100%;
+			}
+		}
+	}
+
+	// .spollers-what-do-we-take__title
+
+	&__title {
+		font-weight: 400;
+		font-size: 18px;
+		margin: 0px 0px 5px 0px;
+		cursor: pointer;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 7px;
+			height: 7px;
+			top: 30%;
+			left: 0;
+			@include tr(0, -50%, 0);
+			background-color: #4d4859;
+			border-radius: 50%;
+			@include anim(0.3s, 0.135s);
+		}
+		&.active {
+			&:before {
+				top: 50%;
+				background-color: $yellow;
+			}
+		}
+	}
+
+	// .spollers-what-do-we-take__desc
+
+	&__desc {
+		display: none;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		color: $gray;
+		width: 220px;
+	}
+}
+.images-what-do-we-take {
+	@media (max-width: $md3+px) {
+		position: relative;
+	}
+	&__img {
+		@include anim(0.3s, 0.135s);
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		&.active {
+			left: 0;
+		}
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $md1+px) {
+			width: 130%;
+			height: 80%;
+		}
+		@media (max-width: $md3+px) {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			justify-content: flex-end;
+			&.active {
+				position: relative;
+				left: 10px;
+			}
+		}
+	}
+}

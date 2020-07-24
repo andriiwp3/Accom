@@ -629,7 +629,22 @@ input.err {
   font-weight: 700;
   font-size: 35px;
   letter-spacing: 0.08em;
-  line-height: 55px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.title__slim {
+  font-weight: 300;
+}
+
+.title__highlighted {
+  white-space: nowrap;
+  text-transform: none;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 12px 20px 9px 20px;
 }
 
 .tooltip {
@@ -688,6 +703,31 @@ input.err {
   font-size: 14px;
   opacity: 0.5;
   margin: 20px 0px 0px 0px;
+}
+
+.card {
+  background: #302C3D;
+  border-radius: 5px;
+  padding: 30px 30px 30px 30px;
+}
+
+.card__img {
+  width: 47px;
+}
+
+.card__img svg,
+.card__img img {
+  max-width: 100%;
+}
+
+.card__img svg path {
+  fill: #FFC582;
+}
+
+.card__title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .popup {
@@ -1445,6 +1485,170 @@ input.err {
   max-width: 203px;
 }
 
+.what-do-we-take {
+  position: relative;
+  padding: 150px 0px 100px 0px;
+}
+
+.what-do-we-take__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.what-do-we-take__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+}
+
+.what-do-we-take__title {
+  margin: 0px 0px 70px 0px;
+}
+
+.what-do-we-take__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.what-do-we-take__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+}
+
+.what-do-we-take__images {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 34%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cards-what-do-we-take__card {
+  width: 213px;
+  margin: 0px 11px 13px 0px;
+}
+
+.cards-what-do-we-take__card:last-child {
+  margin: 0px 0px 13px 0px;
+}
+
+.card-what-do-we-take__img {
+  margin: 0px 0px 15px 0px;
+}
+
+.spollers-what-do-we-take__item {
+  padding: 0px 0px 12px 19px;
+  position: relative;
+}
+
+.spollers-what-do-we-take__item:before,
+.spollers-what-do-we-take__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 1px;
+}
+
+.spollers-what-do-we-take__item:before {
+  height: 100%;
+  background-color: #4d4859;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.spollers-what-do-we-take__item:after {
+  height: 0;
+  background-color: #FFC582;
+  -webkit-transition: all 0.3s ease-in 0.135s;
+  -o-transition: all 0.3s ease 0.135s;
+  -webkit-transition: all 0.3s ease 0.135s;
+  transition: all 0.3s ease 0.135s;
+}
+
+.spollers-what-do-we-take__item.active:after {
+  height: 100%;
+}
+
+.spollers-what-do-we-take__title {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0px 0px 5px 0px;
+  cursor: pointer;
+}
+
+.spollers-what-do-we-take__title:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 30%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  background-color: #4d4859;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in 0.135s;
+  -o-transition: all 0.3s ease 0.135s;
+  -webkit-transition: all 0.3s ease 0.135s;
+  transition: all 0.3s ease 0.135s;
+}
+
+.spollers-what-do-we-take__title.active:before {
+  top: 50%;
+  background-color: #FFC582;
+}
+
+.spollers-what-do-we-take__desc {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #9d9ba5;
+  width: 220px;
+}
+
+.images-what-do-we-take__img {
+  -webkit-transition: all 0.3s ease-in 0.135s;
+  -o-transition: all 0.3s ease 0.135s;
+  -webkit-transition: all 0.3s ease 0.135s;
+  transition: all 0.3s ease 0.135s;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.images-what-do-we-take__img.active {
+  left: 0;
+}
+
+.images-what-do-we-take__img img {
+  max-width: 100%;
+}
+
 @media (min-width: 767.98px) {
   .social__link_acc:hover {
     width: 208px;
@@ -1517,6 +1721,11 @@ input.err {
 @media (max-width: 1182px) {
   .container {
     max-width: 970px;
+  }
+
+  .images-what-do-we-take__img {
+    width: 130%;
+    height: 80%;
   }
 }
 
@@ -1727,6 +1936,40 @@ input.err {
   .card-benefits__desc {
     margin: 0px auto;
   }
+
+  .what-do-we-take__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .what-do-we-take__left {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .what-do-we-take__images {
+    width: 100%;
+    margin: -130px 0px 0px 0px;
+  }
+
+  .images-what-do-we-take {
+    position: relative;
+  }
+
+  .images-what-do-we-take__img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .images-what-do-we-take__img.active {
+    position: relative;
+    left: 10px;
+  }
 }
 
 @media (max-width: 550.98px) {
@@ -1804,11 +2047,23 @@ input.err {
   .title-hero__tooltip {
     padding: 12px 8px 8px 8px;
   }
+
+  .cards-what-do-we-take__card:nth-child(even) {
+    margin: 0px 0px 13px 0px;
+  }
 }
 
 @media (max-width: 479.98px) {
   .phone span {
+    font-size: 11px;
+  }
+
+  .title__highlighted {
     font-size: 12px;
+  }
+
+  .card {
+    padding: 25px 25px 22px 20px;
   }
 
   .header__logo {
@@ -1817,6 +2072,25 @@ input.err {
 
   .cta-hero {
     width: 100%;
+  }
+
+  .what-do-we-take__images {
+    margin: -55px 0px 0px 0px;
+  }
+
+  .cards-what-do-we-take__card {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px 0px 13px 0px;
+  }
+
+  .card-what-do-we-take__img {
+    margin: 0px 15px 0px 0px;
   }
 }
 

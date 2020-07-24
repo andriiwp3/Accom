@@ -369,7 +369,7 @@ body.ie {
 			font-size: 13px;
 		}
 		@media (max-width: $md5+px) {
-			font-size: 12px;
+			font-size: 11px;
 		}
 	}
 	@media (min-width: $md3+px) {
@@ -453,7 +453,8 @@ input.err {
 	font-weight: 700;
 	font-size: 35px;
 	letter-spacing: 0.08em;
-	line-height: 55px;
+	line-height: 50px;
+	text-transform: uppercase;
 	@media (max-width: $md3+px) {
 		font-size: 33px;
 	}
@@ -461,6 +462,26 @@ input.err {
 		font-size: 21px;
 		line-height: 29px;
 	}
+		// .title__slim
+
+		&__slim {
+			font-weight: 300;
+		}
+	
+		// .title__highlighted
+	
+		&__highlighted {
+			white-space: nowrap;
+			text-transform: none;
+			font-weight: 300;
+			font-size: 16px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 5px;
+			padding: 12px 20px 9px 20px;
+			@media (max-width:$md5+px){
+				font-size: 12px;
+			}
+		}
 }
 .tooltip {
 	display: block;
@@ -528,5 +549,36 @@ input.err {
 		font-size: 14px;
 		opacity: 0.5;
 		margin: 20px 0px 0px 0px;
+	}
+}
+.card {
+	background: $darkblue;
+	border-radius: 5px;
+	padding: 30px 30px 30px 30px;
+	@media (max-width:$md5+px){
+		padding: 25px 25px 22px 20px;
+	}
+
+	// .card__img
+
+	&__img {
+		width: 47px;
+		svg,
+		img {
+			max-width: 100%;
+		}
+		svg {
+			path {
+				fill: $yellow;
+			}
+		}
+	}
+
+	// .card__title
+
+	&__title {
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 27px;
 	}
 }
