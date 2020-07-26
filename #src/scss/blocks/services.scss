@@ -1,0 +1,148 @@
+.services {
+	// .services__row
+
+	&__row {
+	}
+
+	// .services__title
+
+	&__title {
+		max-width: 810px;
+		margin: 0px 0px 15px 0px;
+	}
+
+	// .services__desc
+
+	&__desc {
+		margin: 0px 0px 90px 0px;
+	}
+
+	// .services__cards
+
+	&__cards {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		flex-wrap: wrap;
+		@include anim(1.5s, 0s);
+		overflow: hidden;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 330px;
+			left: 0;
+			bottom: 0;
+			@include anim(0.65s, 0s);
+			pointer-events: none;
+			background: linear-gradient(
+				180deg,
+				rgba(60, 55, 75, 0) 23.07%,
+				rgba(60, 55, 75, 0.55534) 35.67%,
+				#3c374b 61.65%
+			);
+			backdrop-filter: blur(3px);
+		}
+		&.active {
+			&:after {
+				opacity: 0;
+			}
+		}
+	}
+
+	// .services__card
+
+	&__card {
+		flex: 0 0 570/1170 * 100%;
+		margin: 0px 0px 30px 0px;
+		padding: 0px 0px 0px 0px !important;
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	// .services__btn
+
+	&__btn {
+		position: relative;
+		bottom: 50px;
+		left: 50%;
+		@include tr(-50%, 0, 0);
+		@include anim(1.5s, 0s);
+		z-index: 5;
+		&.active {
+			bottom: 0px;
+		}
+	}
+}
+.card-services {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	border-radius: 5px;
+	overflow: hidden;
+	@media (min-width: $md3+px) {
+		&:hover {
+			.card-services {
+				&__img {
+					img {
+						@include scale(1);
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: $md4+px) {
+		flex-direction: column;
+	}
+
+	// .card-services__img
+
+	&__img {
+		flex: 0 0 283/570 * 100%;
+		overflow: hidden;
+		@media (max-width: $md4+px) {
+			flex: 0 0 100%;
+			max-height: 200px;
+		}
+		img {
+			@include anim(1.2s, 0s);
+			@include scale(1.15);
+			@media (max-width: $md3+px) {
+				@include scale(1);
+			}
+			@media (max-width: $md4+px) {
+				width: 100%;
+			}
+		}
+	}
+
+	// .card-services__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		padding: 50px 20px 20px 40px;
+		@media (max-width:$md4+px){
+			padding: 40px 25px 35px 25px;
+		}
+	}
+
+	// .card-services__icon
+
+	&__icon {
+		margin: 0px 0px 28px 0px;
+	}
+
+	// .card-services__title
+
+	&__title {
+		margin: 0px 0px 17px 0px;
+	}
+
+	// .card-services__desc
+
+	&__desc {
+	}
+}

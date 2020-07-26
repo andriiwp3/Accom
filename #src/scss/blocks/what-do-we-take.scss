@@ -87,9 +87,9 @@
 	}
 }
 .card-what-do-we-take {
-	// .card-what-do-we-take__img
+	// .card-what-do-we-take__icpn
 
-	&__img {
+	&__icon {
 		margin: 0px 0px 15px 0px;
 		@media (max-width: $md5+px) {
 			margin: 0px 15px 0px 0px;
@@ -165,7 +165,7 @@
 		display: none;
 		font-weight: 400;
 		font-size: 12px;
-		line-height: 20px;
+		line-height: 20/12*100%;
 		letter-spacing: -0.01em;
 		color: $gray;
 		width: 220px;
