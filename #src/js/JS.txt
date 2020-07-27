@@ -1,5 +1,6 @@
 @@include('jquery.form.min.js')
 @@include('jquery.popover.min.js')
+@@include('jquery.animateNumber.min.js')
 @@include('jquery.inputmask.bundle.min.js')
 @@include('jquery.nicescroll.min.js')
 @@include('jquery.ui.touch-punch.min.js')

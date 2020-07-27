@@ -162,3 +162,19 @@ function changeTextOnSeeMoreBtn(btn) {
 	}
 	btn.textContent = 'Смотреть все услуги';
 }
+
+/* $('.item-in-num__num_saved').animateNumber(
+	{
+		number: 370000,
+		numberStep: function (now, tween) {
+			var floored_number = Math.floor(now),
+				target = $(tween.elem);
+
+			target.html(floored_number + ` <span>€</span>`);
+		}
+	},
+	{
+		easing: 'swing',
+		duration: 6000
+	}
+); */
