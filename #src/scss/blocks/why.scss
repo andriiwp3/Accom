@@ -1,0 +1,145 @@
+.why {
+	padding: 0px 0px 70px 0px;
+
+	// .why__row
+
+	&__row {
+	}
+
+	// .why__title
+
+	&__title {
+		max-width: 770px;
+		margin: 0 auto 35px auto;
+		text-align: center;
+	}
+
+	// .why__desc-wrapper
+
+	&__desc-wrapper {
+		margin: 0 auto 55px auto;
+	}
+
+	// .why__desc
+
+	&__desc {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 25/16*100%;
+		max-width: 345px;
+		margin: 0px 25px 0px 0px;
+		@media (max-width:$md3+px){
+			font-size: 14px;
+			max-width: 300px;
+		}
+		@media (max-width:$md4+px){
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	// .why__tooltip
+
+	&__tooltip {
+		padding: 10px 15px 8px 15px;
+		display: flex;
+		align-items: center;
+		svg {
+			margin: 0px 10px 0px 0px;
+		}
+	}
+
+	// .why__body
+
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .why__cards
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 0 920/1170*100%;
+		@media (max-width:$md2+px){
+			flex: 0 0 100%;
+		}
+	}
+
+	// .why__card
+
+	&__card {
+		flex: 0 0 30.3333%;
+		margin: 0px 15px 15px 0px;
+		@media (max-width:$md3+px){
+			flex: 0 0 46%;
+		}
+		@media (max-width:$md4+px){
+			flex: 0 0 100%;
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	// .why__img
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		max-width: 527px;
+		height: 100%;
+		right: 0px;
+		bottom: 0px;
+		display: flex;
+		align-items: center;
+		@include tr(40%, 0, 0);
+		@media (max-width:$md2+px){
+			display: none;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.wrapper-desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width:$md4+px){
+		flex-direction: column;
+	}
+}
+.tooltip-why {
+	&__tip {
+		left: -70px;
+		&:after {
+			left: 80px;
+		}
+	}
+}
+.card-why {
+
+	// .card-why__tag
+
+	&__tag {
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .card-why__icon
+
+	&__icon {
+		margin: 0px 0px 17px 0px;
+	}
+
+	// .card-why__title
+
+	&__title {
+		margin: 0px 0px 18px 0px;
+	}
+
+	// .card-why__desc
+
+	&__desc {
+	}
+}

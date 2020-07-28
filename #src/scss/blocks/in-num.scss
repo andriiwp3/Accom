@@ -24,6 +24,7 @@
 .slider-in-num {
 	width: 100%;
 	max-width: 845px;
+	margin: -30px 0px 0px 0px;
 	@media (max-width: $md2+px) {
 		max-width: 500px;
 	}
@@ -45,6 +46,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
+	margin: 30px 0px 0px 0px;
 	border: 1px solid #595664;
 	border-radius: 5px;
 	user-select: none;

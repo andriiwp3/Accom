@@ -406,6 +406,11 @@ input.err {
   position: relative;
 }
 
+.tooltip_border {
+  border: 1px solid #545061;
+  border-radius: 5px;
+}
+
 .tooltip__tip {
   -webkit-transition: all 0.5s ease-in 0s;
   -o-transition: all 0.5s ease 0s;
@@ -461,6 +466,14 @@ input.err {
   background: #302C3D;
   border-radius: 5px;
   padding: 30px 30px 30px 30px;
+}
+
+.card__tag {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 168.75%;
+  color: #9d9ba5;
 }
 
 .card__icon {
@@ -1095,8 +1108,6 @@ input.err {
   padding: 10px 21px 6px;
   position: relative;
   display: inline-block;
-  border: 1px solid #545061;
-  border-radius: 5px;
   font-weight: 300;
   letter-spacing: 0.08em;
 }
@@ -1562,6 +1573,7 @@ input.err {
 .slider-in-num {
   width: 100%;
   max-width: 845px;
+  margin: -30px 0px 0px 0px;
 }
 
 .item-in-num {
@@ -1575,6 +1587,7 @@ input.err {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  margin: 30px 0px 0px 0px;
   border: 1px solid #595664;
   border-radius: 5px;
   -webkit-user-select: none;
@@ -1715,6 +1728,129 @@ input.err {
 .dots-in-num__list li.slick-active button {
   color: #eb3f57;
   font-size: 14px;
+}
+
+.why {
+  padding: 0px 0px 70px 0px;
+}
+
+.why__title {
+  max-width: 770px;
+  margin: 0 auto 35px auto;
+  text-align: center;
+}
+
+.why__desc-wrapper {
+  margin: 0 auto 55px auto;
+}
+
+.why__desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 156.25%;
+  max-width: 345px;
+  margin: 0px 25px 0px 0px;
+}
+
+.why__tooltip {
+  padding: 10px 15px 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why__tooltip svg {
+  margin: 0px 10px 0px 0px;
+}
+
+.why__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 78.63248%;
+          flex: 0 0 78.63248%;
+}
+
+.why__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30.3333%;
+          flex: 0 0 30.3333%;
+  margin: 0px 15px 15px 0px;
+}
+
+.why__img {
+  position: absolute;
+  width: 100%;
+  max-width: 527px;
+  height: 100%;
+  right: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transform: translate3d(40%, 0, 0);
+  -webkit-transform: translate3d(40%, 0, 0);
+  -ms-transform: translate3d(40%, 0, 0);
+  -o-transform: translate3d(40%, 0, 0);
+  -moz-transform: translate3d(40%, 0, 0);
+}
+
+.why__img img {
+  max-width: 100%;
+}
+
+.wrapper-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tooltip-why__tip {
+  left: -70px;
+}
+
+.tooltip-why__tip:after {
+  left: 80px;
+}
+
+.card-why__tag {
+  margin: 0px 0px 30px 0px;
+}
+
+.card-why__icon {
+  margin: 0px 0px 17px 0px;
+}
+
+.card-why__title {
+  margin: 0px 0px 18px 0px;
 }
 
 @media (min-width: 767.98px) {
@@ -1875,6 +2011,16 @@ input.err {
 
   .item-in-num__num {
     padding: 36px 55px 30px 55px;
+  }
+
+  .why__cards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .why__img {
+    display: none;
   }
 }
 
@@ -2079,6 +2225,17 @@ input.err {
   .slider-in-num {
     max-width: 400px;
   }
+
+  .why__desc {
+    font-size: 14px;
+    max-width: 300px;
+  }
+
+  .why__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 46%;
+            flex: 0 0 46%;
+  }
 }
 
 @media (max-width: 550.98px) {
@@ -2233,6 +2390,24 @@ input.err {
   .dots-in-num__list li.slick-active:after {
     left: 50%;
   }
+
+  .why__desc {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .why__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .wrapper-desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -2273,6 +2448,10 @@ input.err {
 
   .card-what-do-we-take__icon {
     margin: 0px 15px 0px 0px;
+  }
+
+  .images-what-do-we-take__img {
+    left: 110%;
   }
 }
 

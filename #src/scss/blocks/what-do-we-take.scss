@@ -204,5 +204,8 @@
 				left: 10px;
 			}
 		}
+		@media (max-width:$md5+px){
+			left: 110%;
+		}
 	}
 }
