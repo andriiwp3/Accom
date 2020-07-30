@@ -178,3 +178,29 @@ function changeTextOnSeeMoreBtn(btn) {
 		duration: 6000
 	}
 ); */
+
+let clientCardLinks = document.querySelectorAll('.card-client__testimonial-link');
+
+clientCardLinks.forEach(function (link) {
+	link.addEventListener('click', function (e) {
+		e.preventDefault();
+		let card = link.closest('.card-client');
+		card.classList.toggle('active');
+	})
+});
+
+
+
+/*
+* ===================
+*/
+
+let teamPluses = document.querySelectorAll('.team__plus');
+
+teamPluses.forEach(function (plus) {
+	plus.addEventListener('click', function (e) {
+		let tooltip = plus.parentElement.querySelector('.tooltip-team');
+		plus.classList.toggle('active');
+		tooltip.classList.toggle('active');
+	});
+});

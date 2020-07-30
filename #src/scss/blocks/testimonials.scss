@@ -1,0 +1,353 @@
+.testimonials {
+	padding: 0px 0px 120px 0px;
+	// .testimonials__row
+
+	&__row {
+	}
+
+	// .testimonials__head
+
+	&__head {
+	}
+
+	// .testimonials__title
+
+	&__title {
+		max-width: 516px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	// .testimonials__desc
+
+	&__desc {
+		max-width: 492px;
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .testimonials__body
+
+	&__body {
+	}
+
+	// .testimonials__nav
+
+	&__nav {
+		display: inline-flex;
+		align-items: stretch;
+		background-color: $darkblue;
+		border-radius: 5px;
+		padding: 6px 6px 6px 6px;
+		margin: 0px 0px 60px 0px;
+	}
+
+	// .testimonials__navitem
+
+	&__navitem {
+		position: relative;
+		font-weight: 400;
+		font-size: 14px;
+		border-radius: inherit;
+		padding: 17px 30px 15px 30px;
+		@include anim(0.3s, 0s);
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			@include anim(0.3s, 0s);
+			background-color: rgba($darkblue, 0.5);
+			pointer-events: none;
+		}
+		@media (max-width: $md5+px) {
+			padding: 17px 20px 15px 20px;
+		}
+		&.active {
+			background-color: $main;
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+			&:before {
+				background-color: rgba($darkblue, 0);
+			}
+		}
+		// .testimonials__navitem_with-fire
+
+		&_with-fire {
+			padding: 17px 30px 15px 45px;
+			background: url(../img/icons/fire.svg) 30px center no-repeat;
+			@media (max-width: $md5+px) {
+				padding: 17px 20px 15px 35px;
+				background-position: 20px center;
+			}
+		}
+	}
+
+	// .testimonials__items
+
+	&__items {
+		margin: 0px 0px 60px 0px;
+	}
+
+	// .testimonials__item
+
+	&__item {
+	}
+
+	// .testimonials__arrow
+
+	&__arrow {
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+}
+.cases-testimonials {
+	// .cases-testimonials__card
+
+	&__card {
+		margin: 0px 15px;
+	}
+
+	// .cases-testimonials__list
+
+	&__list {
+		overflow: unset;
+	}
+
+	// .cases-testimonials__track
+
+	&__track {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.card-testimonial {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 40px 30px 40px;
+	border: 1px solid $lightgray;
+	border-radius: 5px;
+	user-select: none;
+	@media (max-width: $md5+px) {
+		padding: 30px 25px 30px 25px;
+	}
+
+	// .card-testimonial__body
+
+	&__body {
+		flex: 0 0 470/863 * 100%;
+		margin: 0px 50px 0px 0px;
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	// .card-testimonial__title
+
+	&__title {
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 34/25 * 100%;
+		max-width: 404px;
+		margin: 0px 0px 35px 0px;
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+		}
+		span {
+			font-weight: 300;
+		}
+	}
+
+	// .card-testimonial__benchmarks
+
+	&__benchmarks {
+	}
+
+	// .card-testimonial__img
+
+	&__img {
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .card-testimonial__subtitle
+
+	&__subtitle {
+		font-weight: 600;
+		font-size: 16px;
+		margin: 0px 0px 18px 0px;
+	}
+
+	// .card-testimonial__desc
+
+	&__desc {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20/14 * 100%;
+		color: rgba($white, 0.7);
+		margin: 0px 0px 15px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		@media (max-width:$md4+px){
+			font-size: 12px;
+		}
+	}
+}
+.benchmarks-testimonial {
+	// .benchmarks-testimonial__title
+
+	&__title {
+		font-weight: 300;
+		font-size: 16px;
+		margin: 0px 0px 20px 0px;
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+		}
+	}
+
+	// .benchmarks-testimonial__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	// .benchmarks-testimonial__item
+
+	&__item {
+		flex: 0 0 48%;
+		margin: 0px 0px 20px 0px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20/14 * 100%;
+		padding: 0px 0px 0px 25px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 0 48%;
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 0 100%;
+			font-size: 12px;
+		}
+		span {
+			font-weight: 600;
+		}
+		// .benchmarks-testimonial__item_delivery-type
+
+		&_delivery-type {
+			background-image: url(../img/icons/benchmarks/truck.svg);
+		}
+
+		// .benchmarks-testimonial__item_delivery-term
+
+		&_delivery-term {
+			background-image: url(../img/icons/benchmarks/clock.svg);
+		}
+
+		// .benchmarks-testimonial__item_delivery-services
+
+		&_delivery-services {
+			background-image: url(../img/icons/benchmarks/technical-support.svg);
+		}
+
+		// .benchmarks-testimonial__item_delivery-distance
+
+		&_delivery-distance {
+			background-image: url(../img/icons/benchmarks/car.svg);
+		}
+
+		// .benchmarks-testimonial__item_delivery-cargo
+
+		&_delivery-cargo {
+			background-image: url(../img/icons/benchmarks/box.svg);
+		}
+
+		// .benchmarks-testimonial__item_delivery-sparing
+
+		&_delivery-sparing {
+			background-image: url(../img/icons/benchmarks/piggy-bank.svg);
+		}
+	}
+}
+.complaint {
+	align-items: center;
+	@media (max-width:$md3+px){
+		flex-direction: column;
+	}
+	&.active {
+		display: flex;
+	}
+	// .complaint__mark
+
+	&__mark {
+		max-width: 308px;
+		margin: 0px 30px 0px 0px;
+		@media (max-width:$md3+px){
+			max-width: none;
+			margin: 0px 0px 30px 0px;
+		}
+	}
+}
+.card-complaint {
+	// .card-complaint__body
+
+	&__body {
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// .card-complaint__img
+
+	&__img {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.mark-complaint {
+	font-weight: 400;
+	line-height: 25/16 * 100%;
+	background-color: $darkblue;
+	border-radius: 5px;
+	padding: 35px 30px 35px 30px;
+	// .mark-complaint__title
+
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30/20 * 100%;
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .mark-complaint__subtitle
+
+	&__subtitle {
+		font-size: 16px;
+		margin: 0px 0px 25px 0px;
+		@media (max-width:$md4+px){
+			font-size: 14px;
+		}
+	}
+
+	// .mark-complaint__desc
+
+	&__desc {
+		font-size: 14px;
+		color: rgba($white, 0.5);
+		@media (max-width:$md4+px){
+			font-size: 12px;
+		}
+	}
+}

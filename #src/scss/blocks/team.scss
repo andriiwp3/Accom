@@ -1,0 +1,42 @@
+.team {
+	padding: 30px 0;
+	background-color: $darkblue;
+
+	// .team__row
+
+	&__row {
+	}
+
+	// .team__tag
+
+	&__tag {
+		display: block;
+		text-align: center;
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .team__title
+
+	&__title {
+		margin: 0 auto 25px auto;
+		max-width: 640px;
+		text-align: center;
+	}
+
+	// .team__desc
+
+	&__desc {
+		margin: 0 auto 75px auto;
+		max-width: 601px;
+		text-align: center;
+	}
+
+	// .team__photo
+
+	&__photo {
+		position: relative;
+		img {
+			max-width: 100%;
+		}
+	}
+}

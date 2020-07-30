@@ -1,0 +1,242 @@
+.clients {
+	padding: 100px 0;
+	background-color: $darkblue;
+	background-image: url(../img/dots-grid.png);
+	background-size: 224px auto;
+	background-repeat: no-repeat;
+	background-position: 87% -50px;
+	@media (max-width:$md3+px){
+		background-image: none !important;
+	}
+	
+	// .clients__row
+
+	&__row {
+	}
+
+	// .clients__title
+
+	&__title {
+		max-width: 645px;
+		margin: 0px 0px 80px 0px;
+	}
+
+	// .clients__cards
+
+	&__cards {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .clients__card
+
+	&__card {
+		margin: 0px 15px;
+	}
+
+	// .clients__arrow
+
+	&__arrow {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .clients__under-slider
+
+	&__under-slider {
+		flex-direction: column;
+	}
+
+	// .clients__under-slider-cta 
+
+	&__under-slider-cta {
+		justify-content: space-between;
+	}
+}
+.title-clients {
+	// .title-clients__highlighted
+
+	&__highlighted {
+		display: block;
+		max-width: max-content;
+	}
+}
+.card-client {
+	position: relative;
+	display: inline-block;
+	width: 357px;
+	height: 339px;
+	background-color: $main;
+	border: 1px solid $main;
+	border-radius: 5px;
+	user-select: none;
+	z-index: 2;
+	@include anim(0.5s, 0s);
+	&.active {
+		.card-client {
+			&__front {
+				transform: rotateY(180deg);
+			}
+			&__back {
+				transform: rotateY(0deg);
+			}
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: inherit;
+		z-index: -1;
+	}
+	@media (min-width: $md3+px) {
+		&:hover {
+			&:after {
+				background: rgba(0, 0, 0, 0.27);
+				filter: blur(50px);
+				border-radius: 5px;
+			}
+		}
+	}
+
+	&__front,
+	&__back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
+		transition: inherit;
+	}
+
+	// .card-client__front
+
+	&__front {
+		transform: rotateY(0deg);
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: $main;
+			z-index: -1;
+		}
+	}
+
+	// .card-client__img
+
+	&__img {
+		width: 100%;
+		height: 123px;
+		background-color: $darkblue;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .card-client__body
+
+	&__body {
+		padding: 30px 28px 30px 28px;
+		text-align: center;
+	}
+
+	// .card-client__desc
+
+	&__desc {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 25/14 * 100%;
+		letter-spacing: 0.08em;
+		margin: 0px 0px 20px 0px;
+		span {
+			font-weight: 600;
+		}
+	}
+
+	// .card-client__testimonial-link
+
+	&__testimonial-link {
+		position: relative;
+		display: inline-block;
+		font-weight: 400;
+		font-size: 16px;
+		letter-spacing: 0.08em;
+		color: $ui;
+		cursor: pointer;
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: -6px;
+			background-color: rgba($ui, 0.25);
+		}
+	}
+
+	// .card-client__back
+
+	&__back {
+		background: $main;
+		transform: rotateY(-180deg);
+	}
+}
+
+.cards-clients {
+
+	// .cards-clients__list
+
+	&__list {
+		overflow: unset;
+	}
+}
+
+.testimonials {
+	// .testimonials__footer
+
+	&__footer {
+	}
+
+	// .testimonials__cta
+
+	&__cta {
+	}
+}
+
+.cta-testimonials {
+	// .cta-testimonials__txt
+
+	&__txt {
+	}
+
+	// .cta-testimonials__btn-wrapper
+
+	&__btn-wrapper {
+	}
+
+	// .cta-testimonials__btn
+
+	&__btn {
+	}
+
+	// .cta-testimonials__tooltip
+
+	&__tooltip {
+	}
+
+	// .cta-testimonials__tip
+
+	&__tip {
+	}
+}

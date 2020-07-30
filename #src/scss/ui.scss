@@ -196,6 +196,13 @@ input.err {
 		margin: 10px 0px 0px 0px;
 	}
 }
+.tag {
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba($white, .2);
+}
 .title {
 	font-weight: 700;
 	font-size: 35px;
@@ -236,6 +243,12 @@ input.err {
 	font-size: 16px;
 	line-height: 27/16 * 100%;
 	color: $gray;
+	@media (max-width: $md3+px) {
+		font-size: 14px;
+	}
+	@media (max-width: $md5+px) {
+		font-size: 12px;
+	}
 }
 .tooltip {
 	display: block;
@@ -322,7 +335,7 @@ input.err {
 		display: block;
 		font-weight: 600;
 		font-size: 16px;
-		line-height: 27/16*100%;
+		line-height: 27/16 * 100%;
 		color: $gray;
 	}
 
@@ -365,4 +378,111 @@ input.err {
 }
 .slick-list {
 	overflow: hidden;
+}
+.under-slider {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $md3+px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.under-slider-cta {
+	display: flex;
+	@media (max-width: $md4+px) {
+		flex-direction: column-reverse;
+	}
+	&__txt {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 25/14 * 100%;
+		max-width: 240px;
+		margin: 0px 60px 0px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 40px 0px 0px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 0px 0px;
+			font-size: 12px;
+			text-align: center;
+		}
+		&_bigger {
+			max-width: 350px;
+			@media (max-width: $md3+px) {
+				max-width: 240px;
+			}
+		}
+	}
+	&__btn-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	&__btn {
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		padding: 25px 31px 23px 31px;
+		margin: 0px 0px 17px 0px;
+	}
+	&__tooltip {
+		span {
+			color: $gray;
+		}
+	}
+
+	// .cta-testimonials__tip
+
+	&__tip {
+		left: -130px;
+		&:after {
+			left: 120px;
+		}
+	}
+}
+.arrow {
+	display: flex;
+
+	&__prev,
+	&__next {
+		@include anim(0.3s, 0s);
+		width: 47px;
+		height: 47px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background-color: $ui;
+		border: 1px solid $ui;
+		svg {
+			transition: inherit;
+			fill: $white;
+		}
+		@media (min-width: $md3+px) {
+			&:hover {
+				background-color: transparent;
+				svg {
+					fill: $ui;
+				}
+			}
+		}
+	}
+
+	&__prev {
+		margin: 0px 12px 0px 0px;
+	}
+	&__next {
+	}
+}
+.tab__navitem {
+	cursor: pointer;
+}
+.tab__item {
+	display: none;
+	&.active {
+		display: block;
+	}
 }
