@@ -1,5 +1,5 @@
 //SLIDERS
-if ($('.slider-in-num').length > 0) {
+/* if ($('.slider-in-num').length > 0) {
 	$('.slider-in-num').slick({
 		autoplay: true,
 		dots: true,
@@ -14,7 +14,7 @@ if ($('.slider-in-num').length > 0) {
 			return '<button type="button" role="tab" aria-selected="true">0' + (i + 1) + '</button>';
 		}
 	});
-}
+} */
 if ($('.cases-testimonials').length > 0) {
 	$('.cases-testimonials').slick({
 		autoplay: true,

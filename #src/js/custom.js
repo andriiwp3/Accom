@@ -191,10 +191,10 @@ clientCardLinks.forEach(function (link) {
 
 
 
-/*
+/* 
 * ===================
 */
-
+/*
 let teamPluses = document.querySelectorAll('.team__plus');
 
 teamPluses.forEach(function (plus) {
@@ -203,4 +203,14 @@ teamPluses.forEach(function (plus) {
 		plus.classList.toggle('active');
 		tooltip.classList.toggle('active');
 	});
+}); */
+
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', function (e) {
+	if (window.scrollY > header.getBoundingClientRect().top + 100) {
+		header.classList.add('scrolled');
+		return;
+	}
+	header.classList.remove('scrolled');
 });

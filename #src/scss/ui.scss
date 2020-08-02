@@ -201,7 +201,7 @@ input.err {
 	font-size: 14px;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: rgba($white, .2);
+	color: rgba($white, 0.2);
 }
 .title {
 	font-weight: 700;
@@ -236,6 +236,12 @@ input.err {
 		@media (max-width: $md5+px) {
 			font-size: 12px;
 		}
+	}
+
+	// .title__red
+
+	&__red {
+		color: $ui;
 	}
 }
 .desc {
@@ -374,6 +380,22 @@ input.err {
 		font-size: 14px;
 		line-height: 23/14 * 100%;
 		color: $gray;
+		span {
+			font-weight: 600;
+		}
+	}
+
+	// .card__num
+
+	&__num {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		@include tr(0, 35%, 0);
+		@include anim(0.4s, 0s);
+		font-weight: 700;
+		font-size: 150px;
+		color: rgba($white, 0.03);
 	}
 }
 .slick-list {
@@ -477,6 +499,23 @@ input.err {
 	&__next {
 	}
 }
+.arrow-scrolldown {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba($white, 0.38%);
+	border-radius: 50%;
+	svg {
+		animation: arrowDown 0.5s ease-in 0s infinite alternate;
+	}
+	@media (min-width: $md3+px) {
+		&:hover {
+		}
+	}
+}
+
 .tab__navitem {
 	cursor: pointer;
 }
@@ -559,7 +598,7 @@ input.err {
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
-		@media (max-width:$md4+px){
+		@media (max-width: $md4+px) {
 			font-size: 12px;
 		}
 	}
@@ -612,10 +651,10 @@ input.err {
 		}
 
 		&_details {
-			@media (max-width:$md2+px){
+			@media (max-width: $md2+px) {
 				flex: 0 0 48%;
 			}
-			@media (max-width:$md3+px){
+			@media (max-width: $md3+px) {
 				flex: 0 0 100%;
 			}
 		}
@@ -659,7 +698,7 @@ input.err {
 }
 .complaint {
 	align-items: center;
-	@media (max-width:$md3+px){
+	@media (max-width: $md3+px) {
 		flex-direction: column;
 	}
 	&.active {
@@ -670,7 +709,7 @@ input.err {
 	&__mark {
 		max-width: 308px;
 		margin: 0px 30px 0px 0px;
-		@media (max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			max-width: none;
 			margin: 0px 0px 30px 0px;
 		}
@@ -714,7 +753,7 @@ input.err {
 	&__subtitle {
 		font-size: 16px;
 		margin: 0px 0px 25px 0px;
-		@media (max-width:$md4+px){
+		@media (max-width: $md4+px) {
 			font-size: 14px;
 		}
 	}
@@ -724,8 +763,16 @@ input.err {
 	&__desc {
 		font-size: 14px;
 		color: rgba($white, 0.5);
-		@media (max-width:$md4+px){
+		@media (max-width: $md4+px) {
 			font-size: 12px;
 		}
+	}
+}
+@keyframes arrowDown {
+	from {
+		@include tr(0, -2px, 0);
+	}
+	to {
+		@include tr(0, 5px, 0);
 	}
 }

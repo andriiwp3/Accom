@@ -1,0 +1,156 @@
+.need {
+	position: relative;
+	padding: 80px 0;
+	background-image: url('../img/how/bg.jpg');
+	background-color: $main;
+	background-size: cover;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	@media (max-width:$md3+px){
+		&:before {
+			display: none;
+		}
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		left: 5px;
+		top: -15px;
+		width: 155px;
+		height: 200px;
+		max-width: 234px;
+		max-height: 290px;
+		background: url(../img/dots-grid.png) center no-repeat;
+	}
+
+	// .need__row
+
+	&__row {
+		position: relative;
+		z-index: 2;
+	}
+
+	// .need__title
+
+	&__title {
+		max-width: 695px;
+		margin: 0 auto 30px auto;
+		text-align: center;
+		@media (max-width:$md2+px){
+			margin: 0 auto 80px auto;
+		}
+		@media (max-width:$md3+px){
+			font-size: 25px;
+		}
+	}
+
+	// .need__body
+
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .need__cont
+
+	&__cont {
+		max-width: 100%;
+		flex: 0 0 536/1170*100%;
+		@media (max-width:$md2+px){
+			flex: 0 0 auto;
+		}
+	}
+
+	// .need__card
+
+	&__card {
+		width: 100%;
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .need__btn
+
+	&__btn {
+		padding: 25px 60px 23px 60px;
+		text-transform: uppercase;
+		@media (max-width:$md5+px){
+			display: block;
+			text-align: center;
+		}
+	}
+
+	// .need__img
+
+	&__img {
+		@media (max-width:$md2+px){
+			display: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .need__arrow-scrolldown
+
+	&__arrow-scrolldown {
+		margin: 0 auto;
+	}
+}
+.card-need {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	padding: 30px 30px 30px 0;
+
+	// .card-need__num
+
+	&__num {
+		display: block;
+		min-width: 135px;
+		min-height: 135px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 25px solid $ui;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 50%;
+		position: relative;
+		left: -55px;
+		font-weight: bold;
+		font-size: 35px;
+		color: $ui;
+		@media (max-width:$md5+px){
+			left: -70px;
+		}
+	}
+
+	// .card-need__body
+
+	&__body {
+		@media (max-width:$md5+px){
+			margin-left: -40px;
+		}
+	}
+
+	// .card-need__tag
+
+	&__tag {
+	}
+
+	// .card-need__title
+
+	&__title {
+	}
+
+	// .card-need__desc
+
+	&__desc {
+		max-width: 335px;
+	}
+}

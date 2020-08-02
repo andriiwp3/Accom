@@ -3,11 +3,15 @@
 	// .in-num__row
 
 	&__row {
-		width: 100%;
-		display: flex;
+		width: 80%;
+		margin: 0 auto;
+/* 		display: flex;
 		justify-content: space-around;
 		@media (max-width: $md4+px) {
 			flex-direction: column;
+		} */
+		@media (max-width:$md4+px){
+			width: 100%;
 		}
 	}
 
@@ -21,10 +25,9 @@
 	&__dots {
 	}
 }
-.slider-in-num {
+/* .slider-in-num {
 	width: 100%;
 	max-width: 845px;
-	margin: -30px 0px 0px 0px;
 	@media (max-width: $md2+px) {
 		max-width: 500px;
 	}
@@ -40,13 +43,12 @@
 
 	&__item {
 	}
-}
+} */
 .item-in-num {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	margin: 30px 0px 0px 0px;
 	border: 1px solid #595664;
 	border-radius: 5px;
 	user-select: none;
