@@ -9,9 +9,9 @@
 	<link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body>
-	<div class="loaderArea">
-		<div class="loader"></div>
+<body class="lock">
+	<div class="preloader">
+		<div class="preloader__loader"></div>
 	</div>		
 	<div class="wrapper">
 		@@include('_header.html')
@@ -92,7 +92,7 @@
 
 			<section class="benefits">
 				<div class="container">
-					<div class="benefits__row">
+					<div class="benefits__row _anim-items">
 						<div class="benefits__card card-benefits _anim-items">
 							<div class="card-benefits__img">
 								<svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@
 								комиссий
 							</p>
 						</div>
-						<div class="benefits__card card-benefits _anim-items">
+						<div class="benefits__card card-benefits _anim-show">
 							<div class="card-benefits__img">
 								<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M34.1287 20.4182H41.5449V21.9033H34.1287V20.4182Z" />
@@ -807,7 +807,7 @@
 								Спокойно спать, заниматься другими важными делами,
 								развивать бизнес, это мы и называем
 							</p>
-							<div class="why__tooltip tooltip-why tooltip tooltip_border">
+							<div class="why__tooltip tooltip-why tooltip tooltip_border _anim-items">
 								<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M16.1562 0C14.9624 0 13.8679 0.389557 12.9032 1.15788C11.9783 1.89447 11.3625 2.83265 11 3.51487C10.6375 2.83261 10.0217 1.89447 9.09679 1.15788C8.13205 0.389557 7.03755 0 5.84375 0C2.5123 0 0 2.80606 0 6.52717C0 10.5473 3.13427 13.2977 7.87914 17.4616C8.68489 18.1687 9.59819 18.9702 10.5475 19.825C10.6726 19.9379 10.8333 20 11 20C11.1667 20 11.3274 19.9379 11.4525 19.8251C12.4019 18.9701 13.3152 18.1687 14.1214 17.4612C18.8657 13.2977 22 10.5473 22 6.52717C22 2.80606 19.4877 0 16.1562 0Z"
@@ -933,7 +933,7 @@
 							</h2>
 
 							<div class="offer__questions questions">
-								<ul class="questions__list">
+								<ul class="questions__list _anim-items">
 									<li class="questions__item">Вы имеете свою логистику?</li>
 									<li class="questions__item">Уже работаете с другой компанией?</li>
 									<li class="questions__item">Ищите компанию для оказания услуг?</li>
@@ -944,9 +944,9 @@
 								В любом случае, узнайте, как и на сколько, мы можем сократить ваши издержки
 							</p>
 
-							<a href="#subapplication" class="offer__btn btn pl"><span>Оставить заявку на аудит</span></a>
+							<a href="#subapplication" class="offer__btn btn pl _anim-items"><span>Оставить заявку на аудит</span></a>
 						</div>
-						<div data-da="offer__body, 1, 991.98" class="offer__img img-employee">
+						<div data-da="offer__body, 1, 991.98" class="offer__img img-employee _anim-items">
 							<img class="img-employee__img" src="./img/offer/woman.png" alt="Our Manager" />
 							<div class="img-employee__desc">
 								<div class="img-employee__name">Лагвинец Светлана</div>
@@ -975,13 +975,13 @@
 							</p>
 						</div>
 
-						<div class="testimonials__body tabs">
-							<nav class="testimonials__nav">
+						<div class="testimonials__body tabs _anim-items">
+							<nav class="testimonials__nav _anim-show">
 								<div class="testimonials__navitem tab__navitem active">Успешные кейсы</div>
 								<div class="testimonials__navitem testimonials__navitem_with-fire tab__navitem">Рекламации</div>
 							</nav>
 
-							<div class="testimonials__items">
+							<div class="testimonials__items _anim-show">
 								<div class="testimonials__item cases-testimonials tab__item active">
 									<div class="cases-testimonials__card card-testimonial">
 										<div class="card-testimonial__body">
@@ -1167,12 +1167,12 @@
 							</div>
 						</div>
 
-						<div class="under-slider">
-							<div class="testimonials__arrow arrow">
+						<div class="under-slider _anim-items">
+							<div class="testimonials__arrow arrow _anim-show">
 
 							</div>
 
-							<div class="under-slider-cta">
+							<div class="under-slider-cta _anim-show">
 								<p class="under-slider-cta__txt">
 									Работаем с любым объемом, даже с грузами стоимостью миллионы евро
 								</p>
@@ -1216,7 +1216,7 @@
 							портфель крупных клиентов
 						</h2>
 
-						<div class="clients__cards cards-clients">
+						<div class="clients__cards cards-clients _anim-items">
 							<div class="clients__card card-client">
 								<div class="card-client__front">
 									<div class="card-client__img">
@@ -1386,14 +1386,14 @@
 							</div>
 						</div>
 
-						<div class="clients__under-slider under-slider">
-							<div class="clients__arrow arrow">
+						<div class="clients__under-slider under-slider _anim-items">
+							<div class="clients__arrow arrow _anim-show">
 
 							</div>
 
 
 
-							<div class="clients__under-slider-cta under-slider-cta">
+							<div class="clients__under-slider-cta under-slider-cta _anim-show">
 								<p class="under-slider-cta__txt under-slider-cta__txt_bigger">
 									Это еще раз подтверждает не только наши амбиции и страсть к работе, но качество оказание
 									услуг
@@ -1427,7 +1427,7 @@
 
 			<section class="team">
 				<div class="team__row">
-					<span class="team__tag tag">Компания ACCOM</span>
+					<span class="team__tag tag _anim-items">Компания ACCOM</span>
 					<h2 class="team__title title  _anim-items">
 						<span class="title__slim">
 							Команда из 17+ человек
@@ -1439,59 +1439,13 @@
 						находясь 24/7 на связи, что гарантирует постоянный контроль за вашим грузом
 					</p>
 
-					<div class="team__photo">
+					<div class="team__photo _anim-items">
 						<img src="./img/team.png" alt="Our Team" />
-
-						<!-- <div class="team__tooltips">
-							<div class="team__tooltip-wrapper team__tooltip-wrapper_1">
-								<div class="team__plus">
-									<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M1.38493 7.50914H7.62847V1.26561C7.62847 0.946318 7.88729 0.6875 8.20657 0.6875C8.52586 0.6875 8.78468 0.946318 8.78468 1.26561V7.50914H15.0282C15.3475 7.50914 15.6063 7.76796 15.6063 8.08725C15.6063 8.40654 15.3475 8.66536 15.0282 8.66536H8.78468V14.9089C8.78468 15.2282 8.52586 15.487 8.20657 15.487C7.88729 15.487 7.62847 15.2282 7.62847 14.9089V8.66536H1.38493C1.06564 8.66536 0.806823 8.40654 0.806823 8.08725C0.806823 7.76796 1.06564 7.50914 1.38493 7.50914Z" />
-									</svg>
-								</div>
-								<div class="team__tooltip tooltip-team">
-									<div class="tooltip-team__head">
-										<div class="tooltip-team__name">Алина Алексеевна</div>
-										<div class="tooltip-team__position">Менеджер</div>
-									</div>
-									<div class="tooltip-team__body">
-										<p class="tooltip-team__comment">
-											Моя задача оформить документы для таможни так, чтобы пройти границу без проблем
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="team__tooltip-wrapper team__tooltip-wrapper_2">
-								<div class="team__plus active">
-									<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M1.38493 7.50914H7.62847V1.26561C7.62847 0.946318 7.88729 0.6875 8.20657 0.6875C8.52586 0.6875 8.78468 0.946318 8.78468 1.26561V7.50914H15.0282C15.3475 7.50914 15.6063 7.76796 15.6063 8.08725C15.6063 8.40654 15.3475 8.66536 15.0282 8.66536H8.78468V14.9089C8.78468 15.2282 8.52586 15.487 8.20657 15.487C7.88729 15.487 7.62847 15.2282 7.62847 14.9089V8.66536H1.38493C1.06564 8.66536 0.806823 8.40654 0.806823 8.08725C0.806823 7.76796 1.06564 7.50914 1.38493 7.50914Z" />
-									</svg>
-								</div>
-								<div class="team__tooltip tooltip-team active">
-									<div class="tooltip-team__head">
-										<div class="tooltip-team__name">Алина Алексеевна</div>
-										<div class="tooltip-team__position">Менеджер</div>
-									</div>
-									<div class="tooltip-team__body">
-										<p class="tooltip-team__comment">
-											Моя задача оформить документы для таможни так, чтобы пройти границу без проблем
-										</p>
-									</div>
-								</div>
-							</div>
-						</div> -->
 					</div>
 
-					<div class="under-slider container">
-						<div class="team__arrow arrow">
+					<div class="team__under-slider under-slider container _anim-items">
 
-						</div>
-
-						<div class="under-slider-cta">
+						<div class="under-slider-cta _anim-show">
 							<div class="under-slider-cta__btn-wrapper">
 								<a href="#subapplication" class="under-slider-cta__btn btn pl">
 									<span>
@@ -1528,7 +1482,7 @@
 							Детали компании
 						</h2>
 
-						<div class="details__body tabs">
+						<div class="details__body tabs _anim-items">
 							<nav class="details__nav">
 								<ul class="details__navlist">
 									<li class="details__navitem tab__navitem active">Принципы</li>
@@ -1538,7 +1492,7 @@
 								</ul>
 							</nav>
 
-							<div class="details__items">
+							<div class="details__items _anim-show">
 								<div class="details-item details-item_principles tab__item active">
 									<div class="details-item__body">
 										<h4 class="details-item__title">Главные принципы компании</h4>
@@ -1772,8 +1726,8 @@
 						</h2>
 
 						<div class="need__body">
-							<div class="need__cont">
-								<div class="need__card card-need card">
+							<div class="need__cont _anim-items">
+								<div class="need__card card-need card _anim-show">
 									<div class="card-need__num">1</div>
 									<div class="card-need__body">
 										<span class="card-need__tag card__tag">Действие от вас:</span>
@@ -1782,14 +1736,14 @@
 											позвонить <span>+7 800 360-45-77</span></p>
 									</div>
 								</div>
-								<a href="#subapplication" class="need__btn btn pl"><span>Оставить заявку</span></a>
+								<a href="#subapplication" class="need__btn btn pl _anim-items"><span>Оставить заявку</span></a>
 							</div>
-							<div class="need__img">
+							<div class="need__img _anim-items">
 								<img src="./img/how/laptop.png" alt="Laptop" />
 							</div>
 						</div>
 
-						<a href="#how" class="need__arrow-scrolldown arrow-scrolldown goto">
+						<a href="#how" class="need__arrow-scrolldown arrow-scrolldown goto _anim-items">
 							<svg width="8" height="38" viewBox="0 0 8 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M3.64645 37.3536C3.84171 37.5488 4.15829 37.5488 4.35356 37.3536L7.53554 34.1716C7.7308 33.9763 7.7308 33.6597 7.53554 33.4645C7.34027 33.2692 7.02369 33.2692 6.82843 33.4645L4 36.2929L1.17157 33.4645C0.976312 33.2692 0.65973 33.2692 0.464468 33.4645C0.269205 33.6597 0.269205 33.9763 0.464468 34.1716L3.64645 37.3536ZM3.5 2.18557e-08L3.5 37L4.5 37L4.5 -2.18557e-08L3.5 2.18557e-08Z"
@@ -1807,8 +1761,8 @@
 							<span class="title__slim">Далее мы делаем </span>всю работу
 						</h2>
 
-						<div class="how__cards">
-							<div class="how__card card-how card">
+						<div class="how__cards _anim-items">
+							<div class="how__card card-how card _anim-show">
 								<span class="card-how__tag card__tag">01</span>
 								<h5 class="card-how__title card__title">
 									Прокладываем маршрут, расчитываем стоимость и срок
@@ -1818,7 +1772,7 @@
 								</p>
 								<div class="card__num">01</div>
 							</div>
-							<div class="how__card card-how card">
+							<div class="how__card card-how card _anim-show">
 								<span class="card-how__tag card__tag">02</span>
 								<h5 class="card-how__title card__title">
 									Экспресс оформление, договора
@@ -1829,7 +1783,7 @@
 								</p>
 								<div class="card__num">02</div>
 							</div>
-							<div class="how__card card-how card">
+							<div class="how__card card-how card _anim-show">
 								<span class="card-how__tag card__tag">03</span>
 								<h5 class="card-how__title card__title">
 									Подача транспорта в нужное время и загрузка груза
@@ -1840,7 +1794,7 @@
 								</p>
 								<div class="card__num">03</div>
 							</div>
-							<div class="how__card card-how card">
+							<div class="how__card card-how card _anim-show">
 								<span class="card-how__tag card__tag">04</span>
 								<h5 class="card-how__title card__title">
 									Прохождение таможни без очередей
@@ -1851,7 +1805,7 @@
 								</p>
 								<div class="card__num">04</div>
 							</div>
-							<div class="how__card card-how card">
+							<div class="how__card card-how card _anim-show">
 								<span class="card-how__tag card__tag">05</span>
 								<h5 class="card-how__title card__title">
 									Доставка груза и ежедневное отслеживание
@@ -1861,7 +1815,7 @@
 								</p>
 								<div class="card__num">05</div>
 							</div>
-							<div class="how__card card-how card-how_with-bg card">
+							<div class="how__card card-how card-how_with-bg card _anim-show">
 								<span class="card-how__tag card-how__tag_small card__tag">От вас потребуется</span>
 								<h5 class="card-how__title card__title">
 									2-3 минуты в день, чтобы просмотреть отчет о нахождении груза
@@ -1888,15 +1842,15 @@
 						поэтому создали систему, в который вы будете всегда в выигрыше
 					</p>
 
-					<div class="bonus__tabs tabs">
+					<div class="bonus__tabs tabs _anim-items">
 						<nav class="bonus__nav">
-							<ul class="bonus__navlist">
+							<ul class="bonus__navlist _anim-show">
 								<li class="bonus__navitem tab__navitem active">Клиенту</li>
 								<li class="bonus__navitem tab__navitem">Перевозчику</li>
 							</ul>
 						</nav>
 
-						<div class="bonus__items">
+						<div class="bonus__items _anim-show">
 							<div class="bonus__for-client client-bonus tab__item active">
 								<div class="client-bonus__card card card_light">
 									<div class="card__title">

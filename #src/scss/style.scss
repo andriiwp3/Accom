@@ -45,69 +45,85 @@ $darkblue: #302c3d;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-	background: $main;
+	background-color: $main;
 	color: $white;
 	font-size: 14px;
 	&.lock {
 		overflow: hidden;
 	}
 }
-.loaderArea {
-	background: linear-gradient(90deg, #ff4e50 10%, #f9d423 90%);
-	overflow: hidden;
+.preloader {
 	position: fixed;
+	top: 0;
 	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 100000;
-}
-.loader {
-	height: 40px;
-	width: 40px;
-	position: absolute;
-	left: 50%;
-	margin-left: -20px;
-	top: 50%;
-	margin-top: -20px;
-}
+	width: 100%;
+	height: 100%;
+	background-color: $main;
+	z-index: 999;
 
-.loader:before,
-.loader:after {
-	content: "";
-	height: 40px;
-	width: 40px;
-	border: 8px solid rgba(255, 255, 255, 0.5);
-	border-radius: 10px;
-	position: absolute;
-	top: 0;
+	&__loader {
+		display: block;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		width: 150px;
+		height: 150px;
+		margin: -75px 0 0 -75px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #eb3f57;
+		-webkit-animation: spin 2s linear infinite;
+		animation: spin 2s linear infinite;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			border-radius: 50%;
+			border: 3px solid transparent;
+			border-top-color: #ffc582;
+			-webkit-animation: spin 3s linear infinite;
+			animation: spin 3s linear infinite;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			border-radius: 50%;
+			border: 3px solid transparent;
+			border-top-color: #69e781;
+			-webkit-animation: spin 1.5s linear infinite;
+			animation: spin 1.5s linear infinite;
+		}
+	}
 }
-
-.loader:before {
-	animation: animate 2s infinite linear;
-}
-
-@keyframes animate {
+@-webkit-keyframes spin {
 	0% {
-		transform: rotate(0) skew(0);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
-
 	100% {
-		transform: rotate(180deg) skew(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
-
-.loader:after {
-	animation: animate2 2s infinite linear;
-}
-
-@keyframes animate2 {
+@keyframes spin {
 	0% {
-		transform: rotate(0) skew(0);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
-
 	100% {
-		transform: rotate(-180deg) skew(-360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================

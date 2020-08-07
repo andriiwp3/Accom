@@ -35,5 +35,5 @@ if (animItems.length > 0) {
 	}
 	setTimeout(function () {
 		animOnScroll();
-	}, 1000);
+	}, 1750);
 }

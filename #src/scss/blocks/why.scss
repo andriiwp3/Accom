@@ -43,6 +43,15 @@
 		padding: 10px 15px 8px 15px;
 		display: flex;
 		align-items: center;
+		z-index: 9;
+		@include tr(100%, 0px, 0px);
+		opacity: 0;
+		@include anim(0.3s, 0s);
+		&._in-sight {
+			@include anim(0.4s, .2s);
+			@include tr(0px, 0px, 0px);
+			opacity: 1;
+		}
 		svg {
 			margin: 0px 10px 0px 0px;
 		}
@@ -89,15 +98,15 @@
 		width: 100%;
 		max-width: 527px;
 		height: 100%;
-		right: 0px;
+		right: -100%;
 		bottom: 0px;
 		display: flex;
 		align-items: center;
-		@include tr(100%, 0, 0);
+		@include tr(40%, 0, 0);
 		@include anim(.3s,0s);
 		&._in-sight {
 			@include anim(.4s,1.75s);
-			@include tr(40%, 0, 0);
+			right: 0;
 		}
 		@media (max-width:$md2+px){
 			display: none;

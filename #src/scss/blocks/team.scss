@@ -35,8 +35,20 @@
 
 	&__photo {
 		position: relative;
+		@include anim(.3s,0s);
+		transform: scale(0);
+		&._in-sight {
+			@include anim(.4s,.25s);
+			transform: scale(1);
+		}
 		img {
 			max-width: 100%;
 		}
+	}
+
+	// .team__under-slider
+
+	&__under-slider {
+		justify-content: flex-end;
 	}
 }

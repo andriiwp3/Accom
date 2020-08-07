@@ -19,20 +19,42 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+		&._in-sight {
+			@for $var from 1 to 7 {
+				$delay: $var * 0.13;
+				.how__card {
+					&:nth-child(#{$var}) {
+						@if $var == 1 {
+							transition-property: opacity, transform, background, border;
+							transition-duration: .3s;
+							transition-timing-function: ease-in;
+							transition-delay: .0s;
+						} @else {
+							transition: opacity .3s ease-in #{$delay + s};
+							transition-property: opacity, transform, background, border;
+							transition-duration:.3s;
+							transition-timing-function: ease-in;
+							transition-delay: #{$delay + s}, #{$delay + s}, .0s, .0s;
+						}
+					}
+				}
+			}
+		}
 	}
+	
 
 	// .how__card
 
 	&__card {
 		flex: 0 0 30%;
 		margin: 0px 15px 30px 15px;
-		@media (max-width:$md2+px){
+		@media (max-width: $md2+px) {
 			flex: 0 0 46%;
 		}
-		@media (max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			flex: 0 0 75%;
 		}
-		@media (max-width:$md5+px){
+		@media (max-width: $md5+px) {
 			flex: 0 0 100%;
 		}
 	}
@@ -49,7 +71,7 @@
 			background-color: $darkblue;
 			border: 1px solid rgba(#595664, 0);
 			.card__num {
-				@include tr(0,20%,0);
+				@include tr(0, 20%, 0);
 			}
 		}
 	}

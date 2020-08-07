@@ -1,20 +1,20 @@
 .need {
 	position: relative;
 	padding: 80px 0;
-	background-image: url('../img/how/bg.jpg');
+	background-image: url("../img/how/bg.jpg");
 	background-color: $main;
 	background-size: cover;
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	overflow: hidden;
-	@media (max-width:$md3+px){
+	@media (max-width: $md3+px) {
 		&:before {
 			display: none;
 		}
 	}
-	&:before{
-		content:'';
+	&:before {
+		content: "";
 		position: absolute;
 		left: 5px;
 		top: -15px;
@@ -38,10 +38,10 @@
 		max-width: 695px;
 		margin: 0 auto 30px auto;
 		text-align: center;
-		@media (max-width:$md2+px){
+		@media (max-width: $md2+px) {
 			margin: 0 auto 80px auto;
 		}
-		@media (max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			font-size: 25px;
 		}
 	}
@@ -60,9 +60,35 @@
 
 	&__cont {
 		max-width: 100%;
-		flex: 0 0 536/1170*100%;
-		@media (max-width:$md2+px){
+		flex: 0 0 536/1170 * 100%;
+		@media (max-width: $md2+px) {
 			flex: 0 0 auto;
+		}
+		&._in-sight {
+			.card-need {
+				&__num {
+					@include anim(0.4s, 0.3s);
+					left: -55px;
+					@media (max-width: $md5+px) {
+						left: -70px;
+					}
+				}
+				&__tag {
+					@include anim(0.4s, 0.7s);
+					@include tr(0px, 0px, 0px);
+					opacity: 1;
+				}
+				&__title {
+					@include anim(0.4s, 1s);
+					@include tr(0px, 0px, 0px);
+					opacity: 1;
+				}
+				&__desc {
+					@include anim(0.4s, 1.4s);
+					@include tr(0px, 0px, 0px);
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -78,7 +104,14 @@
 	&__btn {
 		padding: 25px 60px 23px 60px;
 		text-transform: uppercase;
-		@media (max-width:$md5+px){
+		@include tr(-120%,0px,0px);
+		opacity: 0;
+		&._in-sight {
+			@include anim(.4s,.3s);
+			@include tr(0px,0px,0px);
+			opacity: 1;
+		}
+		@media (max-width: $md5+px) {
 			display: block;
 			text-align: center;
 		}
@@ -87,12 +120,20 @@
 	// .need__img
 
 	&__img {
-		@media (max-width:$md2+px){
+		@media (max-width: $md2+px) {
 			display: none;
+		}
+		&._in-sight {
+			img {
+				@include anim(0.4s, 0.7s);
+				transform: scale(1);
+			}
 		}
 
 		img {
 			max-width: 100%;
+			transform: scale(0);
+			@include anim(0.3s, 0s);
 		}
 	}
 
@@ -100,6 +141,15 @@
 
 	&__arrow-scrolldown {
 		margin: 0 auto;
+		&._in-sight {
+			svg{
+			@include anim(.45s, .25s);
+			transform: scale(1);}
+		}
+		svg {
+			transform: scale(0);
+			@include anim(.3s,0s);
+		}
 	}
 }
 .card-need {
@@ -121,19 +171,16 @@
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 		border-radius: 50%;
 		position: relative;
-		left: -55px;
+		left: -135px;
 		font-weight: bold;
 		font-size: 35px;
 		color: $ui;
-		@media (max-width:$md5+px){
-			left: -70px;
-		}
 	}
 
 	// .card-need__body
 
 	&__body {
-		@media (max-width:$md5+px){
+		@media (max-width: $md5+px) {
 			margin-left: -40px;
 		}
 	}
@@ -141,16 +188,25 @@
 	// .card-need__tag
 
 	&__tag {
+		@include tr(0px, 120%, 0px);
+		opacity: 0;
+		@include anim(0.3s, 0s);
 	}
 
 	// .card-need__title
 
 	&__title {
+		@include tr(0px, 120%, 0px);
+		opacity: 0;
+		@include anim(0.3s, 0s);
 	}
 
 	// .card-need__desc
 
 	&__desc {
+		@include tr(0px, 120%, 0px);
+		opacity: 0;
+		@include anim(0.3s, 0s);
 		max-width: 335px;
 	}
 }

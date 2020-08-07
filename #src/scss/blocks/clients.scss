@@ -24,7 +24,15 @@
 	// .clients__cards
 
 	&__cards {
+		@include tr(0px, 120%, 0);
+		opacity: 0;
+		@include anim(0.3s, 0s);
 		margin: 0px 0px 50px 0px;
+		&._in-sight {
+			@include anim(0.4s, 0s);
+			opacity: 1;
+			@include tr(0px, 0px, 0px);
+		}
 	}
 
 	// .clients__card

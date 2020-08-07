@@ -58,13 +58,8 @@
 		flex: 0 0 570/1170 * 100%;
 		margin: 0px 0px 30px 0px;
 		padding: 0px 0px 0px 0px !important;
-		@include tr(0px, 60%, 0px);
-		opacity: 0;
-		&._in-sight {
-			@include anim(0.3s, .2s);
-			@include tr(0px, 0, 0px);
-			opacity: 1;
-		}
+		@include tr(0px, 0, 0px);
+		opacity: 1;
 		@media (max-width: $md2+px) {
 			flex: 0 0 100%;
 		}
@@ -84,7 +79,7 @@
 			bottom: 0px;
 		}
 		&._in-sight {
-			@include anim(.6s, .2s);
+			@include anim(0.6s, 0.2s);
 			@include tr(-50%, 0, 0);
 			opacity: 1;
 		}
@@ -96,6 +91,30 @@
 	align-items: stretch;
 	border-radius: 5px;
 	overflow: hidden;
+	&._in-sight {
+		.card-services {
+			&__img {
+				img {
+					@include anim(0.5s, 0.2s);
+					@include tr(0px, 0px, 0px);
+				}
+			}
+			&__icon {
+				@include anim(0.4s, 0.6s);
+				@include scale(1);
+			}
+			&__title {
+				@include anim(0.4s, 0.9s);
+				@include tr(0px, 0px, 0px);
+				opacity: 1;
+			}
+			&__desc {
+				@include anim(0.3s, 1.2s);
+				@include tr(0px, 0px, 0px);
+				opacity: 1;
+			}
+		}
+	}
 	@media (min-width: $md3+px) {
 		&:hover {
 			.card-services {
@@ -121,11 +140,8 @@
 			max-height: 200px;
 		}
 		img {
-			@include anim(1.2s, 0s);
-			@include scale(1.15);
-			@media (max-width: $md3+px) {
-				@include scale(1);
-			}
+			@include anim(0.3s, 0s);
+			@include tr(-100%, 0px, 0px);
 			@media (max-width: $md4+px) {
 				width: 100%;
 			}
@@ -146,17 +162,25 @@
 	// .card-services__icon
 
 	&__icon {
+		@include anim(0.3s, 0s);
+		@include scale(0);
 		margin: 0px 0px 28px 0px;
 	}
 
 	// .card-services__title
 
 	&__title {
+		@include anim(0.3s, 0s);
+		@include tr(0px, 120%, 0px);
+		opacity: 0;
 		margin: 0px 0px 17px 0px;
 	}
 
 	// .card-services__desc
 
 	&__desc {
+		@include anim(0.3s, 0s);
+		@include tr(0px, 120%, 0px);
+		opacity: 0;
 	}
 }

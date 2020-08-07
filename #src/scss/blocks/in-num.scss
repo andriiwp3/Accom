@@ -114,7 +114,7 @@
 		line-height: 23/14 * 100%;
 		color: rgba($white, 0.8);
 		padding: 31px 40px 28px 50px;
-		@include tr(0px, 60%, 0px);
+		@include tr(0px, 40%, 0px);
 		opacity: 0;
 		@include anim(0.3s, .2s);
 		&._in-sight {
