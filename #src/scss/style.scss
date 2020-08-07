@@ -33,9 +33,9 @@ $ui: #eb3f57;
 $white: #fff;
 $gray: #9d9ba5;
 $lightgray: #787583;
-$green: #69E781;
-$yellow: #FFC582;
-$darkblue: #302C3D;
+$green: #69e781;
+$yellow: #ffc582;
+$darkblue: #302c3d;
 //<Иконки>==========================================================================================
 
 //</Иконки>==========================================================================================
@@ -52,8 +52,63 @@ body {
 		overflow: hidden;
 	}
 }
-area {
-	display: block;
+.loaderArea {
+	background: linear-gradient(90deg, #ff4e50 10%, #f9d423 90%);
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100000;
+}
+.loader {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	top: 50%;
+	margin-top: -20px;
+}
+
+.loader:before,
+.loader:after {
+	content: "";
+	height: 40px;
+	width: 40px;
+	border: 8px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+}
+
+.loader:before {
+	animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0) skew(0);
+	}
+
+	100% {
+		transform: rotate(180deg) skew(360deg);
+	}
+}
+
+.loader:after {
+	animation: animate2 2s infinite linear;
+}
+
+@keyframes animate2 {
+	0% {
+		transform: rotate(0) skew(0);
+	}
+
+	100% {
+		transform: rotate(-180deg) skew(-360deg);
+	}
 }
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
@@ -101,8 +156,8 @@ area {
 //@import "icons";
 @import "popup";
 @import "header";
-@import "footer";
 @import "home";
+@import "footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================

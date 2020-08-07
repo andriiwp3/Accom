@@ -5,12 +5,12 @@
 	&__row {
 		width: 80%;
 		margin: 0 auto;
-/* 		display: flex;
+		/* 		display: flex;
 		justify-content: space-around;
 		@media (max-width: $md4+px) {
 			flex-direction: column;
 		} */
-		@media (max-width:$md4+px){
+		@media (max-width: $md4+px) {
 			width: 100%;
 		}
 	}
@@ -65,18 +65,31 @@
 		align-items: center;
 		background-color: $ui;
 		font-weight: 700;
-		font-size: 40px;
+		font-size: 0px;
 		line-height: 50/40 * 100%;
 		letter-spacing: -0.01em;
 		flex: 0 0 313/845 * 100%;
 		border: 1px solid $ui;
 		border-radius: 5px 0px 0px 5px;
+		@include anim(0.3s, 0s);
+		&._in-sight {
+			@include anim(0.3s, 0.2s);
+			font-size: 40px;
+			span {
+				@include anim(0.3s, 0.35s);
+				@include tr(0px, 0px, 0px);
+				opacity: 1;
+			}
+		}
 		@media (max-width: $md2+px) {
 			padding: 36px 55px 30px 55px;
 		}
 
 		span {
 			font-weight: 300;
+			transition: inherit;
+			@include tr(0px, 120%, 0px);
+			opacity: 0;
 		}
 		// .item-in-num__num_saved
 
@@ -101,6 +114,14 @@
 		line-height: 23/14 * 100%;
 		color: rgba($white, 0.8);
 		padding: 31px 40px 28px 50px;
+		@include tr(0px, 60%, 0px);
+		opacity: 0;
+		@include anim(0.3s, .2s);
+		&._in-sight {
+			@include anim(0.3s, 0.55s);
+			@include tr(0px, 0px, 0px);
+			opacity: 1;
+		}
 	}
 }
 .dots-in-num {
@@ -123,7 +144,7 @@
 			&:last-child {
 				margin: 0px 0px 0px 0px;
 			}
-			@media (max-width:$md4+px){
+			@media (max-width: $md4+px) {
 				margin: 0px 25px 0px 0px;
 				padding: 19px 0px 0px 0px;
 			}
@@ -169,7 +190,7 @@
 			}
 			&.slick-active {
 				padding: 0px 0px 0px 58px;
-				@media (max-width:$md4+px){
+				@media (max-width: $md4+px) {
 					padding: 23px 0px 0px 0px;
 				}
 				&:before {
@@ -181,7 +202,7 @@
 					height: 13px;
 					left: 34px;
 					background-color: $ui;
-					@media (max-width:$md4+px){
+					@media (max-width: $md4+px) {
 						left: 50%;
 					}
 				}

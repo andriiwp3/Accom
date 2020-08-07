@@ -42,6 +42,8 @@
 	// .what-do-we-take__spollers
 
 	&__spollers {
+		@include tr(0px,120%,0px);
+		opacity: 0;
 	}
 
 	// .what-do-we-take__images
@@ -49,9 +51,11 @@
 	&__images {
 		position: absolute;
 		top: 20%;
-		right: 0;
+		right: -20%;
+		opacity: 0;
 		width: 34%;
 		height: 100%;
+		@include anim(.3s,.0s);
 		z-index: -1;
 		img {
 		}

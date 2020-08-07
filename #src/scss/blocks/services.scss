@@ -58,6 +58,13 @@
 		flex: 0 0 570/1170 * 100%;
 		margin: 0px 0px 30px 0px;
 		padding: 0px 0px 0px 0px !important;
+		@include tr(0px, 60%, 0px);
+		opacity: 0;
+		&._in-sight {
+			@include anim(0.3s, .2s);
+			@include tr(0px, 0, 0px);
+			opacity: 1;
+		}
 		@media (max-width: $md2+px) {
 			flex: 0 0 100%;
 		}
@@ -69,11 +76,17 @@
 		position: relative;
 		bottom: 50px;
 		left: 50%;
-		@include tr(-50%, 0, 0);
+		@include tr(50%, 0, 0);
 		@include anim(1.5s, 0s);
+		opacity: 0;
 		z-index: 5;
 		&.active {
 			bottom: 0px;
+		}
+		&._in-sight {
+			@include anim(.6s, .2s);
+			@include tr(-50%, 0, 0);
+			opacity: 1;
 		}
 	}
 }
@@ -125,7 +138,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 50px 20px 20px 40px;
-		@media (max-width:$md4+px){
+		@media (max-width: $md4+px) {
 			padding: 40px 25px 35px 25px;
 		}
 	}

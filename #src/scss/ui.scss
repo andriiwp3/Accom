@@ -1,3 +1,109 @@
+._anim-show {
+	@include tr(0px, 120%, 0);
+	opacity: 0;
+	@include anim(0.3s, 0s);
+	&._in-sight {
+		@include anim(0.8s, 0s);
+		opacity: 1;
+		@include tr(0px, 0px, 0px);
+	}
+}
+._in-sight {
+	._anim-show {
+		opacity: 1;
+		@include tr(0px, 0px, 0px);
+	}
+	.hero {
+		&__title {
+			transition: all 0.3s ease-in 0.65s;
+		}
+		&__subtitle {
+			transition: all 0.3s ease-in 0.85s;
+		}
+		&__cta {
+			transition: all 0.3s ease-in 1.05s;
+		}
+	}
+	&.card-benefits {
+		@for $var from 1 to 5 {
+			$imgDelay: $var * 0.45;
+			$titleDelay: $imgDelay + 0.15;
+			$descDelay: $titleDelay + 0.15;
+			&:nth-child(#{$var}) {
+				@if $var == 1 {
+					.card-benefits__img {
+						@include anim(0.3s, 0s);
+					}
+					.card-benefits__title {
+						@include anim(0.3s, 0.15s);
+					}
+					.card-benefits__desc {
+						@include anim(0.3s, 0.3s);
+					}
+				} @else {
+					.card-benefits__img {
+						@include anim(0.3s, #{$imgDelay + s});
+					}
+					.card-benefits__title {
+						@include anim(0.3s, #{$titleDelay + s});
+					}
+					.card-benefits__desc {
+						@include anim(0.3s, #{$descDelay + s});
+					}
+				}
+			}
+		}
+	}
+	.card-benefits {
+		&__img {
+			transform: scale(1);
+		}
+		&__title {
+			@include tr(0px, 0px, 0px);
+			opacity: 1;
+		}
+		&__desc {
+			@include tr(0px, 0px, 0px);
+			opacity: 1;
+		}
+	}
+	.cards-what-do-we-take__card {
+		@for $var from 1 to 11 {
+			$delay: $var * 0.2;
+			&:nth-child(#{$var}) {
+				@if $var == 1 {
+					@include anim(0.3s, 0s);
+				} @else {
+					@include anim(0.3s, #{$delay + s});
+				}
+			}
+		}
+		@include tr(0px, 0px, 0px);
+		opacity: 1;
+	}
+	.what-do-we-take__images {
+		@include anim(.6s,1.9s);
+		right: 0;
+		opacity: 1;
+	}
+	.what-do-we-take__spollers {
+		@include anim(.4s,1.7s);
+		@include tr(0px,0px,0px);
+		opacity: 1;
+	}
+	.why__card {
+		@for $var from 1 to 7 {
+			$delay: $var * 0.25;
+			&:nth-child(#{$var}) {
+				@if $var == 1 {
+					@include anim(0.3s, 0s);
+				} @else {
+					@include anim(0.3s, #{$delay + s});
+				}
+			}
+		}
+	}
+}
 .social {
 	// .social__list
 
@@ -7,6 +113,16 @@
 		align-items: center;
 		li {
 			margin: 0px 12px 0px 0px;
+			@for $var from 1 to 5 {
+				$delay: $var * 0.2;
+				&:nth-child(#{$var}) {
+					@if $var == 1 {
+						@include anim(0.8s, 0s);
+					} @else {
+						@include anim(0.8s, #{$delay + s});
+					}
+				}
+			}
 		}
 	}
 
@@ -23,6 +139,7 @@
 		display: inline-flex;
 		align-items: center;
 		padding: 0px 0px 0px 12px;
+
 		&:after {
 			content: "";
 			transition: inherit;
@@ -66,6 +183,14 @@
 .phone {
 	display: flex;
 	align-items: center;
+	@include tr(0px, 120%, 0px);
+	opacity: 0;
+	@include anim(0.3s, 0s);
+	&._in-sight {
+		@include tr(0px, 0px, 0px);
+		@include anim(0.4s, 0.4s);
+		opacity: 1;
+	}
 	svg {
 		@include anim(0.3s, 0s);
 		display: inline-block;
@@ -110,6 +235,11 @@
 }
 .logo {
 	display: block;
+	transform: scale(0);
+	@include anim(0.4s, 0s);
+	&._in-sight {
+		transform: scale(1);
+	}
 	img {
 		max-width: 100%;
 	}
@@ -209,6 +339,14 @@ input.err {
 	letter-spacing: 0.08em;
 	line-height: 50/35 * 100%;
 	text-transform: uppercase;
+	@include tr(0px, 120%, 0px);
+	opacity: 0;
+	@include anim(0.3s, 0s);
+	&._in-sight {
+		@include anim(0.4s, 0s);
+		@include tr(0px, 0px, 0px);
+		opacity: 1;
+	}
 	@media (max-width: $md3+px) {
 		font-size: 33px;
 	}
@@ -249,6 +387,14 @@ input.err {
 	font-size: 16px;
 	line-height: 27/16 * 100%;
 	color: $gray;
+	@include tr(0px, 180%, 0px);
+	opacity: 0;
+	@include anim(0.3s, 0s);
+	&._in-sight {
+		@include anim(0.4s, .2s);
+		@include tr(0px, 0px, 0px);
+		opacity: 1;
+	}
 	@media (max-width: $md3+px) {
 		font-size: 14px;
 	}
@@ -332,14 +478,16 @@ input.err {
 	background: $darkblue;
 	border-radius: 5px;
 	padding: 30px 30px 30px 30px;
-	@include anim(.3s, 0s);
+	@include anim(0.3s, 0s);
+	@include tr(0px, 120%, 0px);
+	opacity: 0;
 	@media (max-width: $md5+px) {
 		padding: 25px 25px 22px 20px;
 	}
 	&_light {
 		background-color: $main;
-		@media (min-width:$md3+px){
-			&:hover{
+		@media (min-width: $md3+px) {
+			&:hover {
 				filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
 				@include tr(-10px, -10px, 0);
 			}
@@ -525,7 +673,6 @@ input.err {
 		}
 	}
 }
-
 .tab__navitem {
 	cursor: pointer;
 }

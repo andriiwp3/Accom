@@ -115,9 +115,6 @@ window.addEventListener('resize', function (e) {
 function limCheckMedia(block, limitedHeightDesk = 50, limitedHeightMob = 30, limitedBreakpoint = 550.98, limitedMargin = 30, limitedColOnDesk = 2) {
 	let blockChildren = [].slice.call(block.children);
 
-	// We check to see if the block needs to be restricted
-	/* if (blockFullHeight < limitedHeight) return; */
-
 	if (window.matchMedia('(max-width: ' + limitedBreakpoint + 'px').matches) {
 		let childrenFullHeight = 0;
 
@@ -163,21 +160,7 @@ function changeTextOnSeeMoreBtn(btn) {
 	btn.textContent = 'Смотреть все услуги';
 }
 
-/* $('.item-in-num__num_saved').animateNumber(
-	{
-		number: 370000,
-		numberStep: function (now, tween) {
-			var floored_number = Math.floor(now),
-				target = $(tween.elem);
 
-			target.html(floored_number + ` <span>€</span>`);
-		}
-	},
-	{
-		easing: 'swing',
-		duration: 6000
-	}
-); */
 
 let clientCardLinks = document.querySelectorAll('.card-client__testimonial-link');
 
@@ -190,20 +173,6 @@ clientCardLinks.forEach(function (link) {
 });
 
 
-
-/* 
-* ===================
-*/
-/*
-let teamPluses = document.querySelectorAll('.team__plus');
-
-teamPluses.forEach(function (plus) {
-	plus.addEventListener('click', function (e) {
-		let tooltip = plus.parentElement.querySelector('.tooltip-team');
-		plus.classList.toggle('active');
-		tooltip.classList.toggle('active');
-	});
-}); */
 
 let header = document.querySelector('header');
 
